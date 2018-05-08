@@ -30,6 +30,7 @@ public class POOFigurasGeometricas {
         System.out.println("| 2) Calcular el area y perimetro de un Cuadrado   |");
         System.out.println("| 3) Calcular el area y perimetro de un Rectangulo |");
         System.out.println("| 4) Calcular el area y perimetro de un TriaguloEq |");
+        System.out.println("| 5) Calcular el area y perimetro de un Pentagono  |");
         System.out.println("| *) Salir                                         |");
         System.out.println("+==================================================+");
         entradaTeclado = new Scanner(System.in);
@@ -90,6 +91,21 @@ public class POOFigurasGeometricas {
                 triangulo.setLado(lado);
                 System.out.println("El Area del Triangulo Equilatero es: " + triangulo.getArea());
                 System.out.println("El Perimetro del Triangulo Equilatero es: " + triangulo.getPerimetro());
+                break;    
+            case 5:
+                /* Se instancia un objeto de la Clase Rectangulo y a la vez se inicilaizan los valores
+                   de sus propiedades "Base" y "Altura" a través del método Constructor (Rectangulo). */
+                limpiarConsola();
+                System.out.println("+==================================================+");
+                System.out.println("| SubPrograma: Pentagono                           |");
+                System.out.println("+==================================================+");
+                System.out.print("Introduzca el valor del Lado: ");
+                double ladoP =  entradaTeclado.nextDouble();
+                System.out.print("Introduzca el valor del apotema: ");
+                double apotema = entradaTeclado.nextDouble();
+                Pentagono pentagono = new Pentagono(ladoP, apotema);
+                System.out.println("El Area del Rectangulo es: " + pentagono.getArea());
+                System.out.println("El Perimetro del Rectangulo es: " + pentagono.getPerimetro());
                 break;    
             default:
                 System.out.println("Salio del programa");
